@@ -1,0 +1,34 @@
+<?php require VIEWS . '/includes/header.phtml' ?>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Cadastrar Produto</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="<?=HOME . '?url=products/list';?>" class="btn btn-warning">
+            Voltar
+        </a>
+
+<form action="<?=HOME . '?url=products/save';?>" method="POST">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome</label>
+    <input type="text" class="form-control" placeholder="Nome" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Preço</label>
+    <input type="text" class="form-control" placeholder="R$ 0,00" name="price">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Quantidade</label>
+    <input type="text" class="form-control" name="qtd">
+  </div>
+  
+  <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+    </div>
+<?php require VIEWS . '/includes/footer.phtml' ?>

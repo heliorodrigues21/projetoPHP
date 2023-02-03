@@ -1,0 +1,31 @@
+<?php require VIEWS . '/includes/header.phtml' ?>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Produtos</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="<?=HOME . '?url=products/save';?>" class="btn btn-default">
+            Cadastrar produto
+        </a>
+        <table class="table">
+            <thead>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+                <td>1</td>
+                <td>Curso PHP-Iniciante</td>
+                <td>R$ 19,90</td>
+                <td>
+                <a href="<?=HOME . '?url=products/edit&id=1';?>" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="<?=HOME . '?url=products/remove&id=1';?>" class="btn btn-sm btn-danger">Remover</a>
+                </td>
+            </tbody>
+        </table>
+    </div>
+<?php require VIEWS . '/includes/footer.phtml' ?>
