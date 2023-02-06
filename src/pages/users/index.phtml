@@ -39,7 +39,7 @@
                 <td><?=date("d/m/Y H:i:s", strtotime($u['created_at']))?></td>
                 <td>
                 <a href="<?=HOME?>/?url=users/edit&id=<?=$u['id'];?>" class="btn btn-sm btn-warning">Editar</a>
-                    <a href="<?=HOME?>/?url=users/remove&id=<?=$u['id'];?>';" class="btn btn-sm btn-danger">Remover</a>
+                    <a href="<?=HOME?>/?url=users/remove&id=<?=$u['id'];?>" class="btn btn-sm btn-danger">Remover</a>
                 </td>
                  </tr>
                  <?php endforeach?>

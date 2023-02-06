@@ -99,4 +99,16 @@ function update($pdo, $data){
 
     return $update->execute();
 }
+
+//Função delete
+function delete($pdo, $id){
+
+    $sql = "DELETE  FROM users WHERE id = :id";
+
+    $delete = $pdo->prepare($sql);
+
+    $delete->bindValue(":id", $id, PDO::PARAM_INT);
+
+    return $delete->execute();
+}
 ?>

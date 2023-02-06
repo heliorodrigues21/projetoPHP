@@ -65,6 +65,19 @@
             }
             require VIEWS . '/users/save.phtml';
         }
+
+        if($page[1] == 'remove'){
+
+            if(! delete(connection(), $_GET['id'])){
+                $msg = 'Erro ao remover usuário';
+                header("Location: " . HOME . '/?url=users/list&msg=' . $msg);
+            }
+
+            $msg = 'Usuário removido com sucesso!';
+            header("Location: " . HOME . '/?url=users/list&msg=' . $msg);
+
+
+        }
     }
 
     if($page[0] == 'products'){
